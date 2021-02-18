@@ -1,64 +1,15 @@
-body {
-  background-color: #dcdde1;
-  color: #2f3640;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.intro p {
-  margin: 30px 0;
-}
-
-.letter {
-  background-color: #f5f6fa;
-  width: 600px;
-  padding: 48px;
-  position: relative;  
-  max-width: 90vw;
-  margin: 5vh auto;
-  
-}
-
-.letter::before,
-.letter::after {
-  content: "";
-  position: absolute;
-  bottom: 12px;
-  width: 40%;
-  height: 10px;
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
-
-.letter::before {
-  left: 15px;
-  transform: skew(-5deg) rotate(-5deg);
-}
-
-.letter::after {
-  right: 15px;
-  transform: skew(5deg) rotate(5deg);
-}
-
+/* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
 }
 
-/* Kasuje margin i padding z listy */
+/* Remove margins and padding from the list */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* Styluje elementy listy zadań */
+/* Style the list items */
 ul li {
   cursor: pointer;
   position: relative;
@@ -66,33 +17,32 @@ ul li {
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
-  
-  
 
+  /* make the list items unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-/* Ustawia nieparzyste elementy listy na inny kolor (efekt zebry) */
+/* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
-/* Ciemniejszy kolor tła po najechaniu myszką */
+/* Darker background-color on hover */
 ul li:hover {
   background: #ddd;
 }
 
-/* Efekt wywołany po kliknięciu - zmienia kolor i powoduje przekreślenie tekstu */
+/* When clicked on, add a background color and strike out text */
 ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
-/* Dodaje znacznik ukończenia zadania */
+/* Add a "checked" mark when clicked on */
 ul li.checked::before {
   content: '';
   position: absolute;
@@ -106,7 +56,7 @@ ul li.checked::before {
   width: 7px;
 }
 
-/* Styluje przycisk zamknięcia zadania */
+/* Style the close button */
 .close {
   position: absolute;
   right: 0;
@@ -119,9 +69,9 @@ ul li.checked::before {
   color: white;
 }
 
-/* Styl nagłówka */
+/* Style the header */
 .header {
-  background-color: #02ac46;
+  background-color: #f44336;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -134,9 +84,8 @@ ul li.checked::before {
   clear: both;
 }
 
-/* Styluje pole do wpisywania treśći */
+/* Style the input */
 input {
-  height: 44px;
   margin: 0;
   border: none;
   border-radius: 0;
@@ -146,7 +95,7 @@ input {
   font-size: 16px;
 }
 
-/* Styluje przycisk "Dodaj"  */
+/* Style the "Add" button */
 .addBtn {
   padding: 10px;
   width: 25%;
@@ -158,4 +107,8 @@ input {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
 }
